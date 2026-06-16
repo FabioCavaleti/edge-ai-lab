@@ -1,0 +1,1 @@
+Progressive Edge AI lab on NVIDIA Jetson Orin Nano, focused on Linux, Docker GPU deployment, inference APIs, video pipelines, TensorRT benchmarking, observability, and secure production-oriented edge AI systems.
