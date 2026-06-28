@@ -28,7 +28,7 @@ Example:
 ssh <user>@192.168.55.1
 ```
 
-If this method does not work, connect the Jetson through Ethernet or configure it on a Wi-Fi network.
+If this method does not work, connect the Jetson through Ethernet or connect it to a Wi-Fi network.
 
 I usually flash the device with an already-created user account, so I did not need to manually configure SSH from scratch.
 
@@ -168,7 +168,7 @@ This adds the current user to the `docker` group, so Docker commands can be exec
 docker info | grep -E "Runtimes|Default Runtime"
 ```
 
-Expected idea:
+Expected output:
 
 ```text
 Runtimes: ... nvidia runc ...
@@ -289,10 +289,10 @@ A lower priority helps keep this SSD-backed swap as a fallback instead of replac
 
 Only disable `nvzramconfig` if you intentionally want to replace ZRAM with a disk-backed swap strategy. For most lab setups, keeping ZRAM enabled and adding an NVMe swap file is safer.
 
-## Setting up tailscale
-- Tailscale is a VPN service that allows you to connect to the jetson from anywhere. Simple, secure, and easy to use. The free usage is limited, but it is enough for our objective.
-- How to set up tailscale:
-- Run the following command to install tailscale:
+## Setting up Tailscale
+- Tailscale is a VPN service that allows you to connect to the Jetson from anywhere. Simple, secure, and easy to use. The free usage is limited, but it is enough for our objective.
+- How to set up Tailscale:
+- Run the following command to install Tailscale:
   ```bash
   curl -fsSL https://tailscale.com/install.sh | sh
   ```
@@ -300,4 +300,4 @@ Only disable `nvzramconfig` if you intentionally want to replace ZRAM with a dis
   ```bash
   sudo tailscale up
   ```
-- You will be prompted to authenticate with your tailscale account. Once authenticated, you can connect to the jetson from anywhere. Tailscale even set up a magicDNS where you can just conect with `ssh <hostname>``
+- You will be prompted to authenticate with your Tailscale account. Once authenticated, you can connect to the Jetson from anywhere. Tailscale even sets up MagicDNS, so you can just connect with `ssh <hostname>`

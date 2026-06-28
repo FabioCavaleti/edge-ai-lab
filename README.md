@@ -43,11 +43,13 @@ This repository documents those practical details while I explore how to build r
 The first part of this repository focuses on the base Jetson setup:
 
 ```text
-00-setup/
+setup/
 ├── setup-notes.md
-├── commands.md
-└── troubleshooting.md
+└── commands.md
 ```
+
+* [`setup/setup-notes.md`](setup/setup-notes.md) — narrative setup log: what happened, what went wrong, what fixed it
+* [`setup/commands.md`](setup/commands.md) — the same topics as a terse, copy-pasteable command reference
 
 Topics covered:
 
@@ -66,9 +68,7 @@ Topics covered:
 
 A small setup verification script is included to check basic system information after setup:
 
-```text
-scripts/verify-setup.sh
-```
+[`scripts/verify-setup.sh`](scripts/verify-setup.sh)
 
 It checks information such as:
 
